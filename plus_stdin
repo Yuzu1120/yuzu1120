@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys
-
+// aaa
 
 def tonum(s):
     try:
