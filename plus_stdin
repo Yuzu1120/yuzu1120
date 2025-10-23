@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-import sys
+# SPDX-FileCopyrightText: 2025 Yuzuki Fujita
+# SPDX-License-Identifier: BSD-3-Clause
+
+import syse
 // aaa
 
 def tonum(s):
