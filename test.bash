@@ -5,11 +5,10 @@ ng () {
 	res=1
 }
 
-
 res=0
 
-a=藤田
-[ "$a" = 柚樹 ] || ng "$LINENO" 
-[ "$a" = 藤田 ] || ng "$LINENO"
+a=$(seq 5 | ./plus)
+[ "$a" = 15  ] || ng "$LINENO" 
 
+[ "$res" = 0 ] && echo OK
 exit $res
