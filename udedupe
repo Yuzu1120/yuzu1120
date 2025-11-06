@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 Yuzuki Fujita
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+
+def udedupe_core(s):
+
+    if not s:
+        return s
+    result = [s[0]]
+    for ch in s[1:]:
+        if ch != result[-1]:
+            result.append(ch)
+    return "".join(result)
+
+def main():
+    try:
+        text = sys.stdin.read()
+    except Exception as e:
+        print(f"Error: failed to read input ({e})", file=sys.stderr)
+        sys.exit(1)
+
+    output = udedupe_core(text)
+    print(output, end="")
+
+if __name__ == "__main__":
+    main()
