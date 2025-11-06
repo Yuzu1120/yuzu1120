@@ -14,39 +14,43 @@ GitHubからリポジトリをクローンする：
 
 ```bash
 git clone https://github.com/Yuzu1120/robosys2025.git
-cd robosys2025
+cd robosys2025```
 
 ### 2.インストール
 
 ```bash
-chmod +x udedupe
+chmod +x udedupe```
 
 このディレクトリに一時的に PATH を通します（ターミナルを閉じると元に戻ります）：
 
 ```bash
-export PATH=$PATH:$(pwd)
+export PATH=$PATH:$(pwd)```
 
 ### 3.基本的な使い方
 
 標準入力で文字列を受け取り、連続する同じ文字を1つにまとめて出力します:
 
 ```bash
-echo "aaacccbbb" | udedupe
+echo "aaacccbbb" | udedupe```
 
-出力: acb
+出力: 
+```nginx
+acb```
 
 ### 4.ファイルに対して使う場合
 
 ```bash
-cat sample.txt | udedupe
+cat sample.txt | udedupe```
 
 ### 5.改行を含んだ複数行の場合
 
 ```bash
-printf "hhheelllo\naaaab\n" | udedupe
+printf "hhheelllo\naaaab\n" | udedupe```
 
-出力：hello
-      ab
+出力：
+```nginx
+hello
+ab```
 
 ## 対応 OS
 - Linux
