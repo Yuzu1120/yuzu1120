@@ -1,7 +1,0 @@
-# 不要なファイル・ディレクトリを無視
-../../CIFAR10/
-../../ai07.ipynb
-../../gradio_simple_cnn.py
-../../gradio_test.py
-../../simple_cnn.pth
-
