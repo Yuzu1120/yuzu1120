@@ -1,12 +1,12 @@
-#robosys2025
+# robosys2025
 
-#udedupe: 連続文字の圧縮
+# udedupe: 連続文字の圧縮
 ![udedupe test](https://github.com/Yuzu1120/robosys2025/actions/workflows/test_udedupe.yml/badge.svg)
 
 標準入力から受け取った文字列に対して、連続して並んだ同じ文字を１回に圧縮して出力するプログラムです。
 文字列中の内容は変更せず、読みやすく整理するために、連続する文字だけを削減します。
 
-##　使い方
+## 使い方
 
 ### 1.ダウンロード
 
@@ -14,43 +14,51 @@ GitHubからリポジトリをクローンする：
 
 ```bash
 git clone https://github.com/Yuzu1120/robosys2025.git
-cd robosys2025```
+cd robosys2025
+```
 
 ### 2.インストール
 
 ```bash
-chmod +x udedupe```
+chmod +x udedupe
+```
 
 このディレクトリに一時的に PATH を通します（ターミナルを閉じると元に戻ります）：
 
 ```bash
-export PATH=$PATH:$(pwd)```
+export PATH=$PATH:$(pwd)
+```
 
 ### 3.基本的な使い方
 
 標準入力で文字列を受け取り、連続する同じ文字を1つにまとめて出力します:
 
 ```bash
-echo "aaacccbbb" | udedupe```
+echo "aaacccbbb" | udedupe
+```
 
 出力: 
 ```nginx
-acb```
+acb
+```
 
 ### 4.ファイルに対して使う場合
 
 ```bash
-cat sample.txt | udedupe```
+cat sample.txt | udedupe
+```
 
 ### 5.改行を含んだ複数行の場合
 
 ```bash
-printf "hhheelllo\naaaab\n" | udedupe```
+printf "hhheelllo\naaaab\n" | udedupe
+```
 
 出力：
 ```nginx
 hello
-ab```
+ab
+```
 
 ## 対応 OS
 - Linux
