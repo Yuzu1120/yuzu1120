@@ -5,24 +5,21 @@
 import sys
 
 def udedupe_core(s):
-
     if not s:
         return s
     result = [s[0]]
-    for ch in s[1:]:
-        if ch != result[-1]:
-            result.append(ch)
+    for c in s[1:]:
+        if c != result[-1]:
+            result.append(c)
     return "".join(result)
 
 def main():
     try:
-        text = sys.stdin.read()
+        for line in sys.stdin:
+            print(udedupe_core(line.rstrip("\n")))
     except Exception as e:
-        print(f"Error: failed to read input ({e})", file=sys.stderr)
+        print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
-
-    output = udedupe_core(text)
-    print(output, end="")
 
 if __name__ == "__main__":
     main()
