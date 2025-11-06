@@ -20,7 +20,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Make udedupe executable
-      run: chomd +x ./udedupe
+      run: chmod +x ./udedupe
 
     - name: Run Bash tests
       run: bash -xv ./test_udedupe.bash
