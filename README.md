@@ -79,8 +79,6 @@ ab
 
 本ソフトウェアは、GitHub Actions により自動テストを行っている。
 
-![udedupe test](https://github.com/Yuzu1120/robosys2025/actions/workflows/test_udedupe.yml/badge.svg)
-
 テスト内容は `test_udedupe.bash` により実施され、標準入力からの文字列処理が正しく行われることを確認している。
 
 ## テスト環境
@@ -88,10 +86,10 @@ ab
 - GitHub Actions により Python 3.8 / 3.9 / 3.10 / 3.11 / 3.12 で自動テスト済み
 
 ## ライセンス・謝辞
-- このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
-- このパッケージには，千葉工業大学「ロボットシステム学」授業資料に含まれるコード例を参考・引用した部分があります．
+- このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます。
+- このパッケージには，千葉工業大学「ロボットシステム学」授業資料に含まれるコード例を参考・引用した部分があります。
 - 引用元（ライセンス：CC-BY-SA 4.0 by Ryuichi Ueda）：
    - https://github.com/ryuichiueda/my_slides/tree/master/robosys_2025
-- 引用部分は CC-BY-SA 4.0 の条件に従い，適切に明示された上で再配布しています．
+- 引用部分は CC-BY-SA 4.0 の条件に従い，適切に明示された上で再配布しています。
 
 © 2025 Yuzuki Fujita
