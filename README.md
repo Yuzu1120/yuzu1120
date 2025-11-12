@@ -94,4 +94,4 @@ ab
    - https://github.com/ryuichiueda/my_slides/tree/master/robosys_2025
 - 引用部分は CC-BY-SA 4.0 の条件に従い，適切に明示された上で再配布しています．
 
-- © 2025 Yuzuki Fujita
+© 2025 Yuzuki Fujita
