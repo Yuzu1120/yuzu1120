@@ -77,4 +77,8 @@ if ! [[ "$clean_result" =~ ^[0-9]+$ ]]; then
     exit 1
 fi
 
+rm -f out_*.txt err_*.txt
+
 echo "All tests passed"
+
+
