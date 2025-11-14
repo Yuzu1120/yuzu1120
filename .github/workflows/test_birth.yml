@@ -1,5 +1,4 @@
 name: birth test
-
 on:
   push:
     branches: [main]
