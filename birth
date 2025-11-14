@@ -19,7 +19,7 @@ def main():
         error("生年月日を入力してください")
 
     try:
-        birth_date = datetime.strptime(birth_str. "%y-%m-%d").date()
+        birth_date = datetime.strptime(birth_str, "%y-%m-%d").date()
     except ValueError:
         print("YYYY-MM-DD形式で入力してください")
 
@@ -29,8 +29,8 @@ def main():
         error("未来の日付が入力されています")
 
     age = today.year - birth_date.year
-    if (today.month, today.day) < (birth_date.month, birth_date.day)
-    age -= 1
+    if (today.month, today.day) < (birth_date.month, birth_date.day):
+        age -= 1
 
     print(age)
 
