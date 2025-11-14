@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 Yuzuki Fujita
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+from datetime import date, datetime
+
+def error(message: str):
+    print(f"Error: {message}", file=sys.stderr)
+    sys.exit(1)
+
+def main():
+    if len(sys.argv) >= 2:
+        birth_str = sys.argv[1]
+    else:
+        birth_str = sys.stdin.readline().strip()
+
+    if not birth_str:
+        error("生年月日を入力してください")
+
+    try:
+        birth_date = datetime.strptime(birth_str. "%y-%m-%d").date()
+    except ValueError:
+        print("YYYY-MM-DD形式で入力してください")
+
+    today = date.today()
+
+    if birth_date > today:
+        error("未来の日付が入力されています")
+
+    age = today.year - birth_date.year
+    if (today.month, today.day) < (birth_date.month, birth_date.day)
+    age -= 1
+
+    print(age)
+
+if __name__ == "__main__":
+    main()
