@@ -1,6 +1,6 @@
 # robosys2025
 
-# birth: 年齢計算
+# birth： 年齢計算
 ![birth test](https://github.com/Yuzu1120/robosys2025/actions/workflows/test_birth.yml/badge.svg)
 
 生年月日（YYYY-MM-DD形式）を標準入力または引数で受け取り、
