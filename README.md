@@ -61,7 +61,7 @@ echo "15-10-2005" | birth
 ```
 
 出力：
-```javascript
+```css
 Error: YYYY-MM-DD形式で入力してください
 ```
 
@@ -72,7 +72,7 @@ echo "" | birth
 ```
 
 出力：
-```javascript
+```css
 Error: 生年月日を入力してください
 ```
 
@@ -83,7 +83,7 @@ echo "2045-11-20" | birth
 ```
 
 出力：
-```javascript
+```css
 Error: 未来の日付が入力されています
 ```
 
