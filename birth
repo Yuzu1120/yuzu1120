@@ -21,7 +21,7 @@ def main():
     try:
         birth_date = datetime.strptime(birth_str, "%Y-%m-%d").date()
     except ValueError:
-        print("YYYY-MM-DD形式で入力してください")
+        error("YYYY-MM-DD形式で入力してください")
 
     today = date.today()
 
