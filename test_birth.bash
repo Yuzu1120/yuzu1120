@@ -1,4 +1,4 @@
-#!/bin/bash -xv
+#!/bin/bash
 # SPDX-FileCopyrightText: 2025 Yuzuki Fujita
 # SPDX-License-Identifier: BSD-3-Clause
 
@@ -9,7 +9,7 @@ BIRTH="./birth"
 #年齢出力確認
 test_birth="2005-11-20"
 
-result=$(echo "test_birth" | $BIRTH)
+result=$(echo "$test_birth" | $BIRTH)
 
 year=$(date +%Y)
 month=$(date +%m)
@@ -75,5 +75,6 @@ clean_result=$(echo "2000-01-01" | $BIRTH)
 if ! [[ "$clean_result" =~ ^[0-9]+$ ]]; then
     echo "Error: 出力が数字だけではありません → '$clean_result'" >&2
     exit 1
+fi
 
 echo "All tests passed"
