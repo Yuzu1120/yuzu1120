@@ -4,18 +4,24 @@
 
 set -e
 
-BIRTH="./bin/birth"
+BIRTH="./birth"
 
 #年齢出力確認
-result=$(echo "2005-11-20" | $BIRTH)
+test_birth="2005-11-20"
+
+result=$(echo "test_birth" | $BIRTH)
 
 year=$(date +%Y)
 month=$(date +%m)
 day=$(date +%d)
 
-expected=$(( year - 2000 ))
-if (( month < 1 || (month == 1 && day < 1) )); then
-	expected=$((expected - 1))
+birth_year=$(echo "$test_birth" | cut -d- -f1)
+birth_month=$(echo "$test_birth" | cut -d- -f2)
+birth_day=$(echo "$test_birth" | cut -d- -f3)
+
+expected=$(( year - birth_year ))
+if (( month < birth_month || (month == birth_month && day < birth_day) )); then
+    expected=$((expected - 1))
 fi
 
 if [ "$result" != "$expected" ]; then
