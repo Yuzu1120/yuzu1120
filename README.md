@@ -1,16 +1,20 @@
 # robosys2025
 
-# udedupe: 連続文字の圧縮
-![udedupe test](https://github.com/Yuzu1120/robosys2025/actions/workflows/test_udedupe.yml/badge.svg)
+# birth: 年齢計算
+![birth test](https://github.com/Yuzu1120/robosys2025/actions/workflows/test_birth.yml/badge.svg)
 
-標準入力から受け取った文字列に対して、連続して並んだ同じ文字を１回に圧縮して出力するプログラムです。
-文字列中の内容は変更せず、読みやすく整理するために、連続する文字だけを削減します。
+生年月日（YYYY-MM-DD形式）を標準入力または引数で受け取り、
+**現在の年齢を計算して出力するコマンド**です。
+
+- 標準入力または引数で日付を受け取ります
+- 正常時は年齢を標準出力します
+- 空入力・形式間違い・未来日などの入力時は標準エラー出力します
 
 ## 使い方
 
 ### 1.ダウンロード
 
-GitHubからリポジトリをクローンする：
+GitHubからリポジトリをクローンします：
 
 ```bash
 git clone https://github.com/Yuzu1120/robosys2025.git
@@ -20,7 +24,7 @@ cd robosys2025
 ### 2.インストール
 
 ```bash
-chmod +x udedupe
+chmod +x birth
 ```
 
 このディレクトリに一時的に PATH を通します（ターミナルを閉じると元に戻ります）：
@@ -31,33 +35,54 @@ export PATH=$PATH:$(pwd)
 
 ### 3.基本的な使い方
 
-標準入力で文字列を受け取り、連続する同じ文字を1つにまとめて出力します:
+生年月日を標準入力で与えると、現在の年齢を計算して出力します:
 
 ```bash
-echo "aaacccbbb" | udedupe
+echo "2005-10-15" | birth 
 ```
 
 出力: 
 ```nginx
-acb
+20
 ```
 
-### 4.ファイルに対して使う場合
+### 4.引数として与える
 
 ```bash
-cat sample.txt | udedupe
+birth 2005-10-15
 ```
 
-### 5.改行を含んだ複数行の場合
+### 5.不正な入力例
+
+**形式間違え（YYYY-MM-DD以外）**
 
 ```bash
-printf "hhheelllo\naaaab\n" | udedupe
+echo "15-10-2005" | birth
 ```
 
 出力：
-```nginx
-hello
-ab
+```javascript
+Error: YYYY-MM-DD形式で入力してください
+```
+
+**空入力**
+
+```bash
+echo "" | birth
+```
+
+```javascript
+Error: 生年月日を入力してください
+```
+
+**未来日**
+
+```bash
+echo "2045-11-20" | birth
+```
+
+```javascript
+Error: 未来の日付が入力されています
 ```
 
 ## 対応 OS
@@ -77,9 +102,13 @@ ab
 
 ## テストの結果
 
-本ソフトウェアは、GitHub Actions により自動テストを行っている。
-
-テスト内容は `test_udedupe.bash` により実施され、標準入力からの文字列処理が正しく行われることを確認している。
+本ソフトウェアは、GitHub Actions により自動テストを行っています。
+テスト内容は `test_birth.bash` により実施され、以下を確認しています。
+- 正しい年齢計算が行われているか
+- 生年月日形式誤りを適切に検出できるか
+- 空入力をエラーとするか
+- 未来日入力をエラーとするか
+- 標準出力と標準エラー出力が正しく分離されているか
 
 ## テスト環境
 - Ubuntu 22.04 LTS (WSL2 上）
