@@ -61,7 +61,7 @@ echo "15-10-2005" | birth
 ```
 
 出力：
-```css
+```javascript
 Error: YYYY-MM-DD形式で入力してください
 ```
 
