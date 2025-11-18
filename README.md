@@ -122,5 +122,7 @@ Error: 未来の日付が入力されています
 - 引用元（ライセンス：CC-BY-SA 4.0 by Ryuichi Ueda）：
    - [ryuichiueda/my_slides robosys_2025](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2025)
 - 引用部分は CC-BY-SA 4.0 の条件に従い，適切に明示された上で再配布しています。
+- また、このパッケージには、以下のウェブサイトに掲載されている内容も参考にしています。 
+   - https://kamedassou.com/python_calc_age/
 
 © 2025 Yuzuki Fujita
